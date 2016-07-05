@@ -1,0 +1,569 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\Morris\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.9.3
+3 info using node@v4.2.3
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData gulp
+20 silly mapToRegistry name gulp
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'gulp',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   name: 'gulp',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/gulp
+25 silly fetchNamedPackageData laravel-elixir
+26 silly mapToRegistry name laravel-elixir
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry data Result {
+29 silly mapToRegistry   raw: 'laravel-elixir',
+29 silly mapToRegistry   scope: null,
+29 silly mapToRegistry   name: 'laravel-elixir',
+29 silly mapToRegistry   rawSpec: '',
+29 silly mapToRegistry   spec: 'latest',
+29 silly mapToRegistry   type: 'tag' }
+30 silly mapToRegistry uri https://registry.npmjs.org/laravel-elixir
+31 silly fetchNamedPackageData bootstrap-sass
+32 silly mapToRegistry name bootstrap-sass
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'bootstrap-sass',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   name: 'bootstrap-sass',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri https://registry.npmjs.org/bootstrap-sass
+37 verbose request uri https://registry.npmjs.org/gulp
+38 verbose request no auth needed
+39 info attempt registry request try #1 at 7:43:07 PM
+40 verbose request id 937a87c821a1e5f7
+41 verbose etag "CSVV71N0DFBMK2JGSXK8HWXPT"
+42 http request GET https://registry.npmjs.org/gulp
+43 verbose request uri https://registry.npmjs.org/bootstrap-sass
+44 verbose request no auth needed
+45 info attempt registry request try #1 at 7:43:07 PM
+46 verbose etag "76HR6LNMFJJTYIZ8NWISPTICK"
+47 http request GET https://registry.npmjs.org/bootstrap-sass
+48 verbose request uri https://registry.npmjs.org/laravel-elixir
+49 verbose request no auth needed
+50 info attempt registry request try #1 at 7:43:07 PM
+51 verbose etag "EWMS6YJ6B1OI1Z54B7E535M1H"
+52 http request GET https://registry.npmjs.org/laravel-elixir
+53 http 304 https://registry.npmjs.org/laravel-elixir
+54 verbose headers { date: 'Tue, 05 Jul 2016 16:43:10 GMT',
+54 verbose headers   via: '1.1 varnish',
+54 verbose headers   'cache-control': 'max-age=300',
+54 verbose headers   etag: '"EWMS6YJ6B1OI1Z54B7E535M1H"',
+54 verbose headers   age: '298',
+54 verbose headers   connection: 'keep-alive',
+54 verbose headers   'x-served-by': 'cache-lcy1132-LCY',
+54 verbose headers   'x-cache': 'HIT',
+54 verbose headers   'x-cache-hits': '1',
+54 verbose headers   'x-timer': 'S1467736990.905371,VS0,VE0',
+54 verbose headers   vary: 'Accept-Encoding' }
+55 silly get cb [ 304,
+55 silly get   { date: 'Tue, 05 Jul 2016 16:43:10 GMT',
+55 silly get     via: '1.1 varnish',
+55 silly get     'cache-control': 'max-age=300',
+55 silly get     etag: '"EWMS6YJ6B1OI1Z54B7E535M1H"',
+55 silly get     age: '298',
+55 silly get     connection: 'keep-alive',
+55 silly get     'x-served-by': 'cache-lcy1132-LCY',
+55 silly get     'x-cache': 'HIT',
+55 silly get     'x-cache-hits': '1',
+55 silly get     'x-timer': 'S1467736990.905371,VS0,VE0',
+55 silly get     vary: 'Accept-Encoding' } ]
+56 verbose etag https://registry.npmjs.org/laravel-elixir from cache
+57 verbose get saving laravel-elixir to C:\Users\Morris\AppData\Roaming\npm-cache\registry.npmjs.org\laravel-elixir\.cache.json
+58 verbose correctMkdir C:\Users\Morris\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+59 http 304 https://registry.npmjs.org/bootstrap-sass
+60 verbose headers { date: 'Tue, 05 Jul 2016 16:43:10 GMT',
+60 verbose headers   via: '1.1 varnish',
+60 verbose headers   'cache-control': 'max-age=300',
+60 verbose headers   etag: '"76HR6LNMFJJTYIZ8NWISPTICK"',
+60 verbose headers   age: '7',
+60 verbose headers   connection: 'keep-alive',
+60 verbose headers   'x-served-by': 'cache-lcy1132-LCY',
+60 verbose headers   'x-cache': 'HIT',
+60 verbose headers   'x-cache-hits': '1',
+60 verbose headers   'x-timer': 'S1467736990.909627,VS0,VE0',
+60 verbose headers   vary: 'Accept-Encoding' }
+61 silly get cb [ 304,
+61 silly get   { date: 'Tue, 05 Jul 2016 16:43:10 GMT',
+61 silly get     via: '1.1 varnish',
+61 silly get     'cache-control': 'max-age=300',
+61 silly get     etag: '"76HR6LNMFJJTYIZ8NWISPTICK"',
+61 silly get     age: '7',
+61 silly get     connection: 'keep-alive',
+61 silly get     'x-served-by': 'cache-lcy1132-LCY',
+61 silly get     'x-cache': 'HIT',
+61 silly get     'x-cache-hits': '1',
+61 silly get     'x-timer': 'S1467736990.909627,VS0,VE0',
+61 silly get     vary: 'Accept-Encoding' } ]
+62 verbose etag https://registry.npmjs.org/bootstrap-sass from cache
+63 verbose get saving bootstrap-sass to C:\Users\Morris\AppData\Roaming\npm-cache\registry.npmjs.org\bootstrap-sass\.cache.json
+64 verbose correctMkdir C:\Users\Morris\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+65 silly resolveWithNewModule laravel-elixir@5.0.0 checking installable status
+66 silly cache add args [ 'laravel-elixir@^5.0.0', null ]
+67 verbose cache add spec laravel-elixir@^5.0.0
+68 silly cache add parsed spec Result {
+68 silly cache add   raw: 'laravel-elixir@^5.0.0',
+68 silly cache add   scope: null,
+68 silly cache add   name: 'laravel-elixir',
+68 silly cache add   rawSpec: '^5.0.0',
+68 silly cache add   spec: '>=5.0.0 <6.0.0',
+68 silly cache add   type: 'range' }
+69 silly addNamed laravel-elixir@>=5.0.0 <6.0.0
+70 verbose addNamed ">=5.0.0 <6.0.0" is a valid semver range for laravel-elixir
+71 silly addNameRange { name: 'laravel-elixir',
+71 silly addNameRange   range: '>=5.0.0 <6.0.0',
+71 silly addNameRange   hasData: false }
+72 silly mapToRegistry name laravel-elixir
+73 silly mapToRegistry using default registry
+74 silly mapToRegistry registry https://registry.npmjs.org/
+75 silly mapToRegistry data Result {
+75 silly mapToRegistry   raw: 'laravel-elixir',
+75 silly mapToRegistry   scope: null,
+75 silly mapToRegistry   name: 'laravel-elixir',
+75 silly mapToRegistry   rawSpec: '',
+75 silly mapToRegistry   spec: 'latest',
+75 silly mapToRegistry   type: 'tag' }
+76 silly mapToRegistry uri https://registry.npmjs.org/laravel-elixir
+77 verbose addNameRange registry:https://registry.npmjs.org/laravel-elixir not in flight; fetching
+78 silly resolveWithNewModule bootstrap-sass@3.3.6 checking installable status
+79 silly cache add args [ 'bootstrap-sass@^3.3.0', null ]
+80 verbose cache add spec bootstrap-sass@^3.3.0
+81 silly cache add parsed spec Result {
+81 silly cache add   raw: 'bootstrap-sass@^3.3.0',
+81 silly cache add   scope: null,
+81 silly cache add   name: 'bootstrap-sass',
+81 silly cache add   rawSpec: '^3.3.0',
+81 silly cache add   spec: '>=3.3.0 <4.0.0',
+81 silly cache add   type: 'range' }
+82 silly addNamed bootstrap-sass@>=3.3.0 <4.0.0
+83 verbose addNamed ">=3.3.0 <4.0.0" is a valid semver range for bootstrap-sass
+84 silly addNameRange { name: 'bootstrap-sass',
+84 silly addNameRange   range: '>=3.3.0 <4.0.0',
+84 silly addNameRange   hasData: false }
+85 silly mapToRegistry name bootstrap-sass
+86 silly mapToRegistry using default registry
+87 silly mapToRegistry registry https://registry.npmjs.org/
+88 silly mapToRegistry data Result {
+88 silly mapToRegistry   raw: 'bootstrap-sass',
+88 silly mapToRegistry   scope: null,
+88 silly mapToRegistry   name: 'bootstrap-sass',
+88 silly mapToRegistry   rawSpec: '',
+88 silly mapToRegistry   spec: 'latest',
+88 silly mapToRegistry   type: 'tag' }
+89 silly mapToRegistry uri https://registry.npmjs.org/bootstrap-sass
+90 verbose addNameRange registry:https://registry.npmjs.org/bootstrap-sass not in flight; fetching
+91 verbose get https://registry.npmjs.org/bootstrap-sass not expired, no request
+92 silly addNameRange number 2 { name: 'bootstrap-sass',
+92 silly addNameRange   range: '>=3.3.0 <4.0.0',
+92 silly addNameRange   hasData: true }
+93 silly addNameRange versions [ 'bootstrap-sass',
+93 silly addNameRange   [ '2.3.2',
+93 silly addNameRange     '3.1.1',
+93 silly addNameRange     '3.2.0',
+93 silly addNameRange     '3.3.0',
+93 silly addNameRange     '3.3.1',
+93 silly addNameRange     '3.3.2',
+93 silly addNameRange     '3.3.3',
+93 silly addNameRange     '3.3.4',
+93 silly addNameRange     '3.3.5',
+93 silly addNameRange     '3.3.6' ] ]
+94 silly addNamed bootstrap-sass@3.3.6
+95 verbose addNamed "3.3.6" is a plain semver version for bootstrap-sass
+96 verbose get https://registry.npmjs.org/laravel-elixir not expired, no request
+97 silly addNameRange number 2 { name: 'laravel-elixir',
+97 silly addNameRange   range: '>=5.0.0 <6.0.0',
+97 silly addNameRange   hasData: true }
+98 silly addNameRange versions [ 'laravel-elixir',
+98 silly addNameRange   [ '0.1.0',
+98 silly addNameRange     '0.1.1',
+98 silly addNameRange     '0.1.2',
+98 silly addNameRange     '0.1.3',
+98 silly addNameRange     '0.1.4',
+98 silly addNameRange     '0.1.5',
+98 silly addNameRange     '0.1.6',
+98 silly addNameRange     '0.1.7',
+98 silly addNameRange     '0.1.8',
+98 silly addNameRange     '0.1.9',
+98 silly addNameRange     '0.2.0',
+98 silly addNameRange     '0.2.1',
+98 silly addNameRange     '0.2.2',
+98 silly addNameRange     '0.3.0',
+98 silly addNameRange     '0.3.1',
+98 silly addNameRange     '0.3.2',
+98 silly addNameRange     '0.3.3',
+98 silly addNameRange     '0.3.4',
+98 silly addNameRange     '0.3.5',
+98 silly addNameRange     '0.3.7',
+98 silly addNameRange     '0.3.8',
+98 silly addNameRange     '0.3.9',
+98 silly addNameRange     '0.3.10',
+98 silly addNameRange     '0.3.11',
+98 silly addNameRange     '0.4.0',
+98 silly addNameRange     '0.4.1',
+98 silly addNameRange     '0.4.3',
+98 silly addNameRange     '0.4.4',
+98 silly addNameRange     '0.4.5',
+98 silly addNameRange     '0.4.6',
+98 silly addNameRange     '0.4.7',
+98 silly addNameRange     '0.4.8',
+98 silly addNameRange     '0.4.9',
+98 silly addNameRange     '0.4.10',
+98 silly addNameRange     '0.4.11',
+98 silly addNameRange     '0.4.12',
+98 silly addNameRange     '0.4.13',
+98 silly addNameRange     '0.4.14',
+98 silly addNameRange     '0.4.15',
+98 silly addNameRange     '0.4.16',
+98 silly addNameRange     '0.4.17',
+98 silly addNameRange     '0.5.0',
+98 silly addNameRange     '0.5.1',
+98 silly addNameRange     '0.5.2',
+98 silly addNameRange     '0.5.3',
+98 silly addNameRange     '0.5.4',
+98 silly addNameRange     '0.5.5',
+98 silly addNameRange     '0.5.6',
+98 silly addNameRange     '0.5.7',
+98 silly addNameRange     '0.5.8',
+98 silly addNameRange     '0.6.0',
+98 silly addNameRange     '0.6.1',
+98 silly addNameRange     '0.6.2',
+98 silly addNameRange     '0.6.3',
+98 silly addNameRange     '0.6.4',
+98 silly addNameRange     '0.6.5',
+98 silly addNameRange     '0.6.6',
+98 silly addNameRange     '0.7.0',
+98 silly addNameRange     '0.6.7',
+98 silly addNameRange     '0.6.8',
+98 silly addNameRange     '0.7.1',
+98 silly addNameRange     '0.7.3',
+98 silly addNameRange     '0.7.4',
+98 silly addNameRange     '0.7.5',
+98 silly addNameRange     '0.7.6',
+98 silly addNameRange     '0.7.7',
+98 silly addNameRange     '0.7.8',
+98 silly addNameRange     '0.7.9',
+98 silly addNameRange     '0.7.10',
+98 silly addNameRange     '0.7.11',
+98 silly addNameRange     '0.8.0',
+98 silly addNameRange     '0.8.1',
+98 silly addNameRange     '0.9.1',
+98 silly addNameRange     '0.10.0',
+98 silly addNameRange     '0.10.1',
+98 silly addNameRange     '0.10.2',
+98 silly addNameRange     '0.10.3',
+98 silly addNameRange     '0.10.4',
+98 silly addNameRange     '0.10.5',
+98 silly addNameRange     '0.10.6',
+98 silly addNameRange     '0.10.7',
+98 silly addNameRange     '0.11.0',
+98 silly addNameRange     '0.12.0',
+98 silly addNameRange     '0.12.2',
+98 silly addNameRange     '0.12.3',
+98 silly addNameRange     '0.13.0',
+98 silly addNameRange     '0.13.1',
+98 silly addNameRange     '0.13.2',
+98 silly addNameRange     '0.13.3',
+98 silly addNameRange     '0.14.0',
+98 silly addNameRange     '0.14.2',
+98 silly addNameRange     '0.14.3',
+98 silly addNameRange     '0.14.4',
+98 silly addNameRange     '0.15.0',
+98 silly addNameRange     '0.15.1',
+98 silly addNameRange     '0.15.2',
+98 silly addNameRange     '0.15.3',
+98 silly addNameRange     '0.15.4',
+98 silly addNameRange     '0.15.5',
+98 silly addNameRange     '0.16.0',
+98 silly addNameRange     '0.16.1',
+98 silly addNameRange     '0.16.2',
+98 silly addNameRange     '0.16.3',
+98 silly addNameRange     '0.18.0',
+98 silly addNameRange     '0.18.1',
+98 silly addNameRange     '0.18.2',
+98 silly addNameRange     '0.18.3',
+98 silly addNameRange     '0.18.4',
+98 silly addNameRange     '0.18.5',
+98 silly addNameRange     '0.18.6',
+98 silly addNameRange     '0.18.7',
+98 silly addNameRange     '1.0.1',
+98 silly addNameRange     '1.0.2',
+98 silly addNameRange     '1.0.3',
+98 silly addNameRange     '2.0.0',
+98 silly addNameRange     '2.0.1',
+98 silly addNameRange     '2.1.0',
+98 silly addNameRange     '2.1.1',
+98 silly addNameRange     '2.1.2',
+98 silly addNameRange     '2.2.0',
+98 silly addNameRange     '2.2.1',
+98 silly addNameRange     '2.2.2',
+98 silly addNameRange     '2.2.3',
+98 silly addNameRange     '2.2.4',
+98 silly addNameRange     '2.3.0',
+98 silly addNameRange     '2.3.1',
+98 silly addNameRange     '2.3.2',
+98 silly addNameRange     '2.3.3',
+98 silly addNameRange     '2.3.4',
+98 silly addNameRange     '2.3.5',
+98 silly addNameRange     '2.3.6',
+98 silly addNameRange     '2.3.8',
+98 silly addNameRange     '2.3.9',
+98 silly addNameRange     '2.3.10',
+98 silly addNameRange     '2.3.11',
+98 silly addNameRange     '2.3.12',
+98 silly addNameRange     '2.3.13',
+98 silly addNameRange     '3.0.0-beta1',
+98 silly addNameRange     '3.0.0-beta2',
+98 silly addNameRange     '3.0.0',
+98 silly addNameRange     '3.0.1',
+98 silly addNameRange     '3.0.3',
+98 silly addNameRange     '3.0.4',
+98 silly addNameRange     '3.0.5',
+98 silly addNameRange     '3.0.6',
+98 silly addNameRange     '3.0.7',
+98 silly addNameRange     '3.1.0',
+98 silly addNameRange     '3.1.1',
+98 silly addNameRange     '3.1.2',
+98 silly addNameRange     '3.2.1',
+98 silly addNameRange     '3.2.2',
+98 silly addNameRange     '3.2.3',
+98 silly addNameRange     '3.2.4',
+98 silly addNameRange     '3.2.5',
+98 silly addNameRange     '3.2.6',
+98 silly addNameRange     '3.2.7',
+98 silly addNameRange     '3.2.8',
+98 silly addNameRange     '3.3.0',
+98 silly addNameRange     '3.3.1',
+98 silly addNameRange     '3.3.2',
+98 silly addNameRange     '3.3.3',
+98 silly addNameRange     '3.3.4',
+98 silly addNameRange     '3.3.5',
+98 silly addNameRange     '3.4.0',
+98 silly addNameRange     '3.4.1',
+98 silly addNameRange     '3.4.2',
+98 silly addNameRange     '4.0.0',
+98 silly addNameRange     '3.4.3',
+98 silly addNameRange     '4.0.1',
+98 silly addNameRange     '4.0.3',
+98 silly addNameRange     '4.0.4',
+98 silly addNameRange     '4.1.0',
+98 silly addNameRange     '4.1.1',
+98 silly addNameRange     '4.1.2',
+98 silly addNameRange     '4.2.0',
+98 silly addNameRange     '4.2.1',
+98 silly addNameRange     '5.0.0',
+98 silly addNameRange     '6.0.0-0',
+98 silly addNameRange     '6.0.0-1',
+98 silly addNameRange     '6.0.0-2',
+98 silly addNameRange     '6.0.0-3',
+98 silly addNameRange     '6.0.0-4',
+98 silly addNameRange     '6.0.0-5',
+98 silly addNameRange     '6.0.0-6',
+98 silly addNameRange     '6.0.0-7',
+98 silly addNameRange     '6.0.0-8',
+98 silly addNameRange     '6.0.0-9' ] ]
+99 silly addNamed laravel-elixir@5.0.0
+100 verbose addNamed "5.0.0" is a plain semver version for laravel-elixir
+101 silly mapToRegistry name bootstrap-sass
+102 silly mapToRegistry using default registry
+103 silly mapToRegistry registry https://registry.npmjs.org/
+104 silly mapToRegistry data Result {
+104 silly mapToRegistry   raw: 'bootstrap-sass',
+104 silly mapToRegistry   scope: null,
+104 silly mapToRegistry   name: 'bootstrap-sass',
+104 silly mapToRegistry   rawSpec: '',
+104 silly mapToRegistry   spec: 'latest',
+104 silly mapToRegistry   type: 'tag' }
+105 silly mapToRegistry uri https://registry.npmjs.org/bootstrap-sass
+106 verbose addRemoteTarball https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.6.tgz not in flight; adding
+107 verbose addRemoteTarball [ 'https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.6.tgz',
+107 verbose addRemoteTarball   '363b0d300e868d3e70134c1a742bb17288444fd1' ]
+108 silly cache afterAdd laravel-elixir@5.0.0
+109 verbose afterAdd C:\Users\Morris\AppData\Roaming\npm-cache\laravel-elixir\5.0.0\package\package.json not in flight; writing
+110 verbose correctMkdir C:\Users\Morris\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+111 info retry fetch attempt 1 at 7:43:11 PM
+112 info attempt registry request try #1 at 7:43:11 PM
+113 http fetch GET https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.6.tgz
+114 verbose afterAdd C:\Users\Morris\AppData\Roaming\npm-cache\laravel-elixir\5.0.0\package\package.json written
+115 http fetch 200 https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.6.tgz
+116 http 304 https://registry.npmjs.org/gulp
+117 verbose headers { date: 'Tue, 05 Jul 2016 16:43:14 GMT',
+117 verbose headers   via: '1.1 varnish',
+117 verbose headers   'cache-control': 'max-age=300',
+117 verbose headers   etag: '"CSVV71N0DFBMK2JGSXK8HWXPT"',
+117 verbose headers   age: '140',
+117 verbose headers   connection: 'keep-alive',
+117 verbose headers   'x-served-by': 'cache-lcy1127-LCY',
+117 verbose headers   'x-cache': 'HIT',
+117 verbose headers   'x-cache-hits': '7',
+117 verbose headers   'x-timer': 'S1467736994.539295,VS0,VE0',
+117 verbose headers   vary: 'Accept-Encoding' }
+118 silly get cb [ 304,
+118 silly get   { date: 'Tue, 05 Jul 2016 16:43:14 GMT',
+118 silly get     via: '1.1 varnish',
+118 silly get     'cache-control': 'max-age=300',
+118 silly get     etag: '"CSVV71N0DFBMK2JGSXK8HWXPT"',
+118 silly get     age: '140',
+118 silly get     connection: 'keep-alive',
+118 silly get     'x-served-by': 'cache-lcy1127-LCY',
+118 silly get     'x-cache': 'HIT',
+118 silly get     'x-cache-hits': '7',
+118 silly get     'x-timer': 'S1467736994.539295,VS0,VE0',
+118 silly get     vary: 'Accept-Encoding' } ]
+119 verbose etag https://registry.npmjs.org/gulp from cache
+120 verbose get saving gulp to C:\Users\Morris\AppData\Roaming\npm-cache\registry.npmjs.org\gulp\.cache.json
+121 verbose correctMkdir C:\Users\Morris\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+122 silly resolveWithNewModule gulp@3.9.1 checking installable status
+123 silly cache add args [ 'gulp@^3.9.1', null ]
+124 verbose cache add spec gulp@^3.9.1
+125 silly cache add parsed spec Result {
+125 silly cache add   raw: 'gulp@^3.9.1',
+125 silly cache add   scope: null,
+125 silly cache add   name: 'gulp',
+125 silly cache add   rawSpec: '^3.9.1',
+125 silly cache add   spec: '>=3.9.1 <4.0.0',
+125 silly cache add   type: 'range' }
+126 silly addNamed gulp@>=3.9.1 <4.0.0
+127 verbose addNamed ">=3.9.1 <4.0.0" is a valid semver range for gulp
+128 silly addNameRange { name: 'gulp', range: '>=3.9.1 <4.0.0', hasData: false }
+129 silly mapToRegistry name gulp
+130 silly mapToRegistry using default registry
+131 silly mapToRegistry registry https://registry.npmjs.org/
+132 silly mapToRegistry data Result {
+132 silly mapToRegistry   raw: 'gulp',
+132 silly mapToRegistry   scope: null,
+132 silly mapToRegistry   name: 'gulp',
+132 silly mapToRegistry   rawSpec: '',
+132 silly mapToRegistry   spec: 'latest',
+132 silly mapToRegistry   type: 'tag' }
+133 silly mapToRegistry uri https://registry.npmjs.org/gulp
+134 verbose addNameRange registry:https://registry.npmjs.org/gulp not in flight; fetching
+135 verbose get https://registry.npmjs.org/gulp not expired, no request
+136 silly addNameRange number 2 { name: 'gulp', range: '>=3.9.1 <4.0.0', hasData: true }
+137 silly addNameRange versions [ 'gulp',
+137 silly addNameRange   [ '0.0.1',
+137 silly addNameRange     '0.0.2',
+137 silly addNameRange     '0.0.3',
+137 silly addNameRange     '0.0.4',
+137 silly addNameRange     '0.0.5',
+137 silly addNameRange     '0.0.7',
+137 silly addNameRange     '0.0.8',
+137 silly addNameRange     '0.0.9',
+137 silly addNameRange     '0.1.0',
+137 silly addNameRange     '0.2.0',
+137 silly addNameRange     '1.0.0',
+137 silly addNameRange     '1.1.0',
+137 silly addNameRange     '1.2.0',
+137 silly addNameRange     '1.2.1',
+137 silly addNameRange     '2.0.0',
+137 silly addNameRange     '2.0.1',
+137 silly addNameRange     '2.1.0',
+137 silly addNameRange     '2.2.0',
+137 silly addNameRange     '2.3.0',
+137 silly addNameRange     '2.4.0',
+137 silly addNameRange     '2.4.1',
+137 silly addNameRange     '2.6.0',
+137 silly addNameRange     '2.6.1',
+137 silly addNameRange     '2.7.0',
+137 silly addNameRange     '3.0.0',
+137 silly addNameRange     '3.1.1',
+137 silly addNameRange     '3.1.2',
+137 silly addNameRange     '3.1.3',
+137 silly addNameRange     '3.1.4',
+137 silly addNameRange     '3.2.0',
+137 silly addNameRange     '3.2.1',
+137 silly addNameRange     '3.2.2',
+137 silly addNameRange     '3.2.3',
+137 silly addNameRange     '3.2.4',
+137 silly addNameRange     '3.2.5',
+137 silly addNameRange     '3.3.0',
+137 silly addNameRange     '3.3.1',
+137 silly addNameRange     '3.3.2',
+137 silly addNameRange     '3.3.4',
+137 silly addNameRange     '3.4.0',
+137 silly addNameRange     '3.5.0',
+137 silly addNameRange     '3.5.1',
+137 silly addNameRange     '3.5.2',
+137 silly addNameRange     '3.5.5',
+137 silly addNameRange     '3.5.6',
+137 silly addNameRange     '3.6.0',
+137 silly addNameRange     '3.6.1',
+137 silly addNameRange     '3.6.2',
+137 silly addNameRange     '3.7.0',
+137 silly addNameRange     '3.8.0',
+137 silly addNameRange     '3.8.1',
+137 silly addNameRange     '3.8.2',
+137 silly addNameRange     '3.8.3',
+137 silly addNameRange     '3.8.4',
+137 silly addNameRange     '3.8.5',
+137 silly addNameRange     '3.8.6',
+137 silly addNameRange     '3.8.7',
+137 silly addNameRange     '3.8.8',
+137 silly addNameRange     '3.8.9',
+137 silly addNameRange     '3.8.10',
+137 silly addNameRange     '3.8.11',
+137 silly addNameRange     '3.9.0',
+137 silly addNameRange     '3.9.1' ] ]
+138 silly addNamed gulp@3.9.1
+139 verbose addNamed "3.9.1" is a plain semver version for gulp
+140 silly cache afterAdd gulp@3.9.1
+141 verbose afterAdd C:\Users\Morris\AppData\Roaming\npm-cache\gulp\3.9.1\package\package.json not in flight; writing
+142 verbose correctMkdir C:\Users\Morris\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+143 verbose afterAdd C:\Users\Morris\AppData\Roaming\npm-cache\gulp\3.9.1\package\package.json written
+144 info retry will retry, error on last attempt: Error: read ECONNRESET
+145 info retry will retry, error on last attempt: Error: read ECONNRESET
+146 silly fetchAndShaCheck shasum 363b0d300e868d3e70134c1a742bb17288444fd1
+147 silly rollbackFailedOptional Starting
+148 silly rollbackFailedOptional Finishing
+149 silly runTopLevelLifecycles Starting
+150 silly runTopLevelLifecycles Finishing
+151 silly install printInstalled
+152 verbose stack Error: shasum check failed for C:\Users\Morris\AppData\Local\Temp\npm-28544-7e71c74f\registry.npmjs.org\bootstrap-sass\-\bootstrap-sass-3.3.6.tgz
+152 verbose stack Expected: 363b0d300e868d3e70134c1a742bb17288444fd1
+152 verbose stack Actual:   9d40e42ef15d30fff9fa94db9353c6e6f942b8c1
+152 verbose stack From:     https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.6.tgz
+152 verbose stack     at C:\Users\Morris\AppData\Roaming\npm\node_modules\npm\node_modules\sha\index.js:25:8
+152 verbose stack     at ReadStream.<anonymous> (C:\Users\Morris\AppData\Roaming\npm\node_modules\npm\node_modules\sha\index.js:72:7)
+152 verbose stack     at emitNone (events.js:72:20)
+152 verbose stack     at ReadStream.emit (events.js:166:7)
+152 verbose stack     at endReadableNT (_stream_readable.js:905:12)
+152 verbose stack     at doNTCallback2 (node.js:441:9)
+152 verbose stack     at process._tickCallback (node.js:355:17)
+153 verbose cwd c:\xampp\htdocs\machinehire
+154 error Windows_NT 10.0.10586
+155 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Morris\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install"
+156 error node v4.2.3
+157 error npm  v3.9.3
+158 error shasum check failed for C:\Users\Morris\AppData\Local\Temp\npm-28544-7e71c74f\registry.npmjs.org\bootstrap-sass\-\bootstrap-sass-3.3.6.tgz
+158 error Expected: 363b0d300e868d3e70134c1a742bb17288444fd1
+158 error Actual:   9d40e42ef15d30fff9fa94db9353c6e6f942b8c1
+158 error From:     https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.6.tgz
+159 error If you need help, you may report this error at:
+159 error     <https://github.com/npm/npm/issues>
+160 verbose exit [ 1, true ]
