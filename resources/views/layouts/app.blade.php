@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Machine Soko</title>
+    <title>Course Manager</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
     <!-- Styles -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-paper.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('DataTables/datatables.min.css') }}"/>
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -24,10 +26,13 @@
         .fa-btn {
             margin-right: 6px;
         }
+        .icon-bar {
+            background-color:#0a6ebd !important;
+        }
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-reversed navbar-static-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -41,7 +46,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Marchine Soko
+                    Machine soko
                 </a>
             </div>
 
@@ -72,14 +77,36 @@
             </div>
         </div>
     </nav>
-
+    @if(Session::has('flash_message'))
+        <div class="alert alert-info">
+            {{ Session::get('flash_message') }}
+        </div>
+    @endif
     @yield('content')
-
+    <div class="footer container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-6">
+                <div class="centre-block">Made with <3 @Chuka</div>
+            </div>
+        </div>
+    </div>
     <!-- JavaScripts -->
-   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script> -->
-   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-   <script src="js/jquery.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
+    <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('js/bootstrap-select.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('DataTables/datatables.min.js') }}"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <script>
+        $('.dt').DataTable();
+        $('.delete').on('click',function (e) {
+            var confirmed =confirm("Are you sure?");
+            if(!confirmed){
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        });
+
+                    
+    </script>
 </body>
 </html>

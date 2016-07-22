@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::post('/upload', 'HomeController@upload');
+Route::get('/upload', 'HomeController@uploadFile');
+Route::get('/images/{imageName}/{width?}/{height?}', 'ImagesController@show');
