@@ -1,112 +1,62 @@
 <!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Course Manager</title>
+@section('htmlheader')
+    @include('layouts.partials.htmlheader')
+@show
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="skin-blue sidebar-mini">
+<div class="wrapper">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-paper.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-select.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('DataTables/datatables.min.css') }}"/>
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    @include('layouts.partials.mainheader')
 
-    <style>
-        body {
-            font-family: 'Lato';
-        }
+    @include('layouts.partials.sidebar')
 
-        .fa-btn {
-            margin-right: 6px;
-        }
-        .icon-bar {
-            background-color:#0a6ebd !important;
-        }
-    </style>
-</head>
-<body id="app-layout">
-    <nav class="navbar navbar-reversed navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+        @include('layouts.partials.contentheader')
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Machine soko
-                </a>
-            </div>
+        <!-- Main content -->
+        <section class="content">
+            <!-- Your Page Content Here -->
+            @yield('main-content')
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
 
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
+    @include('layouts.partials.controlsidebar')
 
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+    @include('layouts.partials.footer')
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-        </div>
-    </nav>
-    @if(Session::has('flash_message'))
-        <div class="alert alert-info">
-            {{ Session::get('flash_message') }}
-        </div>
-    @endif
-    @yield('content')
-    <div class="footer container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-6">
-                <div class="centre-block">Made with <3 @Chuka</div>
-            </div>
-        </div>
-    </div>
-    <!-- JavaScripts -->
-    <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ URL::asset('js/bootstrap-select.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('DataTables/datatables.min.js') }}"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-    <script>
-        $('.dt').DataTable();
-        $('.delete').on('click',function (e) {
-            var confirmed =confirm("Are you sure?");
-            if(!confirmed){
-                e.stopPropagation();
-                e.preventDefault();
-            }
-        });
+</div><!-- ./wrapper -->
 
-                    
-    </script>
+@section('scripts')
+    @include('layouts.partials.scripts')
+@show
+
 </body>
 </html>
