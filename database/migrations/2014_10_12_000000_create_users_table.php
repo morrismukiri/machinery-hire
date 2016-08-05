@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('picture_url');
             $table->string('confirmation_code');
             $table->string('password');
+            $table->boolean('admin');
             $table->rememberToken();
             $table->timestamps();
         });

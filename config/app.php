@@ -154,12 +154,14 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-
+       
+        Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+         Collective\Html\HtmlServiceProvider::class,
         /*
          * Acacha AdminLTE template provider
          */
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+         App\Providers\RouteServiceProvider::class,
     ],
 
     /*
@@ -210,6 +212,8 @@ return [
          * Acacha AdminLTE template alias
          */
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        'Form'      => Collective\Html\FormFacade::class,
+        'HTML'      => Collective\Html\HtmlFacade::class,
 
     ],
 

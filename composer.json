@@ -8,7 +8,9 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "intervention/image": "^2.3",
-        "acacha/admin-lte-template-laravel": "^2.0"
+        "acacha/admin-lte-template-laravel": "^2.0",
+        "appzcoder/crud-generator": "^1.1",
+        "laravelcollective/html": "^5.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

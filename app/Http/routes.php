@@ -21,3 +21,7 @@ Route::get('/home', 'HomeController@index');
 Route::post('/upload', 'HomeController@upload');
 Route::get('/upload', 'HomeController@uploadFile');
 Route::get('/images/{imageName}/{width?}/{height?}', 'ImagesController@show');
+
+Route::resource('pricing-models', 'PricingModelsController');
+Route::resource('pricing-rates', 'PricingRatesController');
+Route::resource('categories', 'CategoriesController');
