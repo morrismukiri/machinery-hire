@@ -14,13 +14,13 @@ class categories extends Seeder
     {
         // $faker =Faker\Factory::create();
         
-	    	DB::table('courses')->insert([
+	    	DB::table('categories')->insert([
 	            
 	            'name' =>'None',
 	            'description'=>'Has no parent',
 	            'parent'=>0
 	        ]);
-	        DB::table('courses')->insert([
+	        DB::table('categories')->insert([
 	            
 	            'name' =>'Construction Equipment',
 	            'description'
