@@ -21,7 +21,7 @@
             <div class="form-group {{ $errors->has('parent') ? 'has-error' : ''}}">
                 {!! Form::label('parent', 'Parent', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::number('parent', null, ['class' => 'form-control']) !!}
+                    {!! Form::select('parent',$categories, null, ['class' => 'form-control']) !!}
                     {!! $errors->first('parent', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>

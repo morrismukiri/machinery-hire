@@ -19,7 +19,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(15);
+        $categories = Category::where('id','!=',0)->paginate(15);
 
         return view('categories.index', compact('categories'));
     }
@@ -31,7 +31,8 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        return view('categories.create');
+        $categories = Category::all()->lists('name','id');
+        return view('categories.create',compact('categories'));
     }
 
     /**
@@ -74,8 +75,9 @@ class CategoriesController extends Controller
     public function edit($id)
     {
         $category = Category::findOrFail($id);
+        $categories = Category::all()->lists('name','id');
 
-        return view('categories.edit', compact('category'));
+        return view('categories.edit', compact('category','categories'));
     }
 
     /**

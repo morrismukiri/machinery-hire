@@ -26,4 +26,14 @@ class Category extends Model
      * @var array
      */
     protected $fillable = ['name', 'parent'];
+    public function Parent()
+    {
+        return $this->belongsTo(\App\Category::class,'parent','id');
+    
+    }
+    public function Children()
+    {
+        return $this->hasMany(\App\Category::class,'parent','id');
+    
+    }
 }

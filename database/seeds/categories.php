@@ -15,11 +15,14 @@ class categories extends Seeder
         
 	    	DB::table('courses')->insert([
 	            
-	            'name' =>'Farm Tools'
+	            'name' =>'None',
+	            'description'=>'Has no parent',
+	            'parent'=>0
 	        ]);
 	        DB::table('courses')->insert([
 	            
-	            'name' =>'Construction Equipment'
+	            'name' =>'Construction Equipment',
+	            'description'
 	        ]);
 	    
     }
