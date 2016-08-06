@@ -23,7 +23,8 @@ class categories extends Seeder
 	        DB::table('categories')->insert([
 	            
 	            'name' =>'Construction Equipment',
-	            'description'
+	            'description',
+	            'parent'=>0
 	        ]);
 	    
     }
