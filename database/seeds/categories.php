@@ -17,13 +17,13 @@ class categories extends Seeder
 	    	DB::table('categories')->insert([
 	            
 	            'name' =>'None',
-	            'description'=>'Has no parent',
+	          
 	            'parent'=>0
 	        ]);
 	        DB::table('categories')->insert([
 	            
 	            'name' =>'Construction Equipment',
-	            'description',
+	           
 	            'parent'=>0
 	        ]);
 	    
