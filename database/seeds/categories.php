@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker;
 
 class categories extends Seeder
 {
@@ -11,7 +12,7 @@ class categories extends Seeder
      */
     public function run()
     {
-        $faker =Faker\Factory::create();
+        // $faker =Faker\Factory::create();
         
 	    	DB::table('courses')->insert([
 	            
