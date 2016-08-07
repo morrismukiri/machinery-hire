@@ -7,6 +7,8 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+
+use App\SocialAccountService;
 use Socialite;
 class AuthController extends Controller
 {
@@ -85,10 +87,15 @@ class AuthController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback(SocialAccountService $service)
     {
-        $user = Socialite::driver('facebook')->user();
+        // $user = Socialite::driver('facebook')->user();
 
-        dd($user);
+        // dd($user);
+        $user = $service->createOrGetUser(Socialite::driver('facebook')->user());
+
+        auth()->login($user);
+
+        return redirect()->to('/home');
     }
 }
