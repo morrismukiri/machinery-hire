@@ -135,7 +135,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', null),
+    'domain' => env('SESSION_DOMAIN', 'machinery-hire.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------

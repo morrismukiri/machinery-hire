@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="">
 
     <h1>Categories <a href="{{ url('/categories/create') }}" class="btn btn-primary btn-xs" title="Add New Category"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a></h1>
-    <div class="table">
+    <div class="">
         <table class="table table-bordered table-striped table-hover datatables">
             <thead>
                 <tr>

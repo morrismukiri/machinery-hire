@@ -10,7 +10,8 @@
         "intervention/image": "^2.3",
         "acacha/admin-lte-template-laravel": "^2.0",
         "appzcoder/crud-generator": "^1.1",
-        "laravelcollective/html": "^5.2"
+        "laravelcollective/html": "^5.2",
+        "laravel/socialite": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -156,7 +156,8 @@ return [
         App\Providers\EventServiceProvider::class,
        
         Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
-         Collective\Html\HtmlServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
         /*
          * Acacha AdminLTE template provider
          */
@@ -207,6 +208,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
         /*
          * Acacha AdminLTE template alias

@@ -38,5 +38,10 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'facebook' => [
+    'client_id' => '1565699683731882',
+    'client_secret' => 'b3229c2ee236d67823ffebd2a719df79',
+    'redirect' => 'http://machinery-hire.herokuapp.com/auth/facebook/callback',
+],
 
 ];
