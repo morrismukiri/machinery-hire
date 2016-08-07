@@ -73,13 +73,13 @@ class AuthController extends Controller
         ]);
     }
     /**
-     * Redirect the user to the Facebook authentication page.
+     * Redirect the user to the Oau authentication page.
      *
      * @return Response
      */
-    public function redirectToProvider()
+    public function redirectToProvider($provider)
     {
-        return Socialite::driver('facebook')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
     /**
@@ -87,12 +87,12 @@ class AuthController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback(SocialAccountService $service)
+    public function handleProviderCallback(SocialAccountService $service,$provider)
     {
         // $user = Socialite::driver('facebook')->user();
 
         // dd($user);
-        $user = $service->createOrGetUser(Socialite::driver('facebook')->user());
+        $user = $service->createOrGetUser(Socialite::driver($provider));
 
         auth()->login($user);
 

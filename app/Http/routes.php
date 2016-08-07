@@ -17,8 +17,10 @@ Route::get('/', function () {
 });
 
 Route::auth();
-Route::get('/auth/facebook', 'Auth\AuthController@redirectToProvider');
-Route::get('/auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
+// Route::get('/auth/facebook', 'Auth\AuthController@redirectToProvider');
+// Route::get('/auth/twitter', 'Auth\AuthController@redirectToProvider');
+Route::get('/auth/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('/auth/callback/{provider}', 'Auth\AuthController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index');
 Route::post('/upload', 'HomeController@upload');

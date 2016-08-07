@@ -41,7 +41,12 @@ return [
     'facebook' => [
     'client_id' => '1565699683731882',
     'client_secret' => 'b3229c2ee236d67823ffebd2a719df79',
-    'redirect' => 'https://machinery-hire.herokuapp.com/auth/facebook/callback',
-],
+    'redirect' => 'https://machinery-hire.herokuapp.com/auth/callback/facebook',
+    ],
+    'twitter' => [
+        'client_id' => 'MHFW3sI7Mb0Zuss5Mk6Ihl9K5',
+        'client_secret' => '9l3G6VtuxTxxyzZ5hoJXl2dMl3kb6zfkekuFcrM25WBW2pyDmK',
+        'redirect' => 'https://machinery-hire.herokuapp.com/auth/callback/twitter',
+    ],
 
 ];
