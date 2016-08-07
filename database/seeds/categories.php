@@ -15,7 +15,7 @@ class categories extends Seeder
         // $faker =Faker\Factory::create();
         
 	    	DB::table('categories')->insert([
-	            
+	            'id' =>0,
 	            'name' =>'None',
 	          
 	            'parent'=>0

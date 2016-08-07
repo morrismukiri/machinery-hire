@@ -9,7 +9,7 @@
     <body class="login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>Admin</b>LTE</a>
+            <a href="{{ url('/home') }}"><b>Machinery</b> Hire</a>
         </div><!-- /.login-logo -->
 
         @if (session('status'))
