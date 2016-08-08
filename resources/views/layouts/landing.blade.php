@@ -23,7 +23,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <meta name="twitter:site" content="@acachawiki" />
     <meta name="twitter:creator" content="@acacha1" />
 
-    <title>{{ trans('adminlte_lang::message.landingdescriptionpratt') }}</title>
+    <title>Machinery Hire</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
@@ -52,7 +52,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><b>Machine hire</b></a>
+            <a class="navbar-brand" href="#"><b>Machinery</b> Hire</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -79,25 +79,24 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <div class="row centered">
             <div class="col-lg-12">
-                <h1>Machine hire</h1>
-                <h3>A <a href="https://laravel.com/">Laravel</a> {{ trans('adminlte_lang::message.laravelpackage') }}
-                    scaffolding/boilerplate {{ trans('adminlte_lang::message.to') }} <a href="https://almsaeedstudio.com/preview">AdminLTE</a> {{ trans('adminlte_lang::message.templatewith') }}
-                    <a href="http://getbootstrap.com/">Bootstrap</a> 3.0 {{ trans('adminlte_lang::message.and') }} <a href="http://blacktie.co/demo/pratt/">Pratt</a> Landing page</h3>
+                <h1>Machinery Hire</h1>
+                <h3>The online market place for all types of machine and <a href="#">heavy equipment</a>.<br/>
+                 We connect <a href="#">vendors</a> with idle machinery with the customers close to them</h3>
                 <h3><a href="{{ url('/register') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
             </div>
             <div class="col-lg-2">
-                <h5>{{ trans('adminlte_lang::message.amazing') }}</h5>
-                <p>{{ trans('adminlte_lang::message.basedadminlte') }}</p>
+                <h5>Vendors Post Machine</h5>
+                <p>Vendors can login and add all their available machines</p>
                 <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow1.png') }}">
             </div>
             <div class="col-lg-8">
-                <img class="img-responsive" src="{{ asset('/img/app-bg.png') }}" alt="">
+                <img class="img-responsive" src="{{ asset('/img/heavy-machinery.jpg') }}" alt="">
             </div>
             <div class="col-lg-2">
                 <br>
                 <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow2.png') }}">
-                <h5>{{ trans('adminlte_lang::message.awesomepackaged') }}</h5>
-                <p>... {{ trans('adminlte_lang::message.by') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a> {{ trans('adminlte_lang::message.at') }} <a href="http://acacha.org">acacha.org</a> {{ trans('adminlte_lang::message.readytouse') }}</p>
+                <h5>Customers Find The Perfect Fit</h5>
+                <p>... Customers find the best fit <a href="">By browsing</a> available <a href="#">Machines</a></p>
             </div>
         </div>
     </div> <!--/ .container -->
@@ -109,7 +108,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="intro">
     <div class="container">
         <div class="row centered">
-            <h1>{{ trans('adminlte_lang::message.designed') }}</h1>
+            <h1>Reliable and easy to use</h1>
             <br>
             <br>
             <div class="col-lg-4">
@@ -250,10 +249,10 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="col-lg-5">
             <h3>{{ trans('adminlte_lang::message.address') }}</h3>
             <p>
-                Av. Greenville 987,<br/>
-                New York,<br/>
-                90873<br/>
-                United States
+                Chuka University,<br/>
+                P.O Box 29,<br/>
+                Chuka<br/>
+                Kenya
             </p>
         </div>
 
@@ -282,12 +281,11 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="c">
     <div class="container">
         <p>
-            <a href="https://github.com/acacha/adminlte-laravel"></a><b>admin-lte-laravel</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}.<br/>
-            <strong>Copyright &copy; 2015 <a href="http://acacha.org">Acacha.org</a>.</strong> {{ trans('adminlte_lang::message.createdby') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a>. {{ trans('adminlte_lang::message.seecode') }} <a href="https://github.com/acacha/adminlte-laravel">Github</a>
+            {{-- <a href="https://github.com/acacha/adminlte-laravel"></a><b>admin-lte-laravel</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}.<br/> --}}
+            <strong>Copyright &copy; 2016 <a href="http://chuka.ac.ke"> A Chuka University students project</a>.</strong>
             <br/>
-            AdminLTE {{ trans('adminlte_lang::message.createdby') }} Abdullah Almsaeed <a href="https://almsaeedstudio.com/">almsaeedstudio.com</a>
-            <br/>
-             Pratt Landing Page {{ trans('adminlte_lang::message.createdby') }} <a href="http://www.blacktie.co">BLACKTIE.CO</a>
+            Machinery Hire {{ trans('adminlte_lang::message.createdby') }} Group 5<br/>
+             
         </p>
 
     </div>
