@@ -23,10 +23,10 @@
                     <!-- Menu toggle button -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">4</span>
+                        <span class="label label-success">1</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">{{ trans('adminlte_lang::message.tabmessages') }}</li>
+                        <li class="header">You have one message </li>
                         <li>
                             <!-- inner menu: contains the messages -->
                             <ul class="menu">
@@ -34,15 +34,15 @@
                                     <a href="#">
                                         <div class="pull-left">
                                             <!-- User Image -->
-                                            <img src="/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+                                            <img src="/img/avatar.png" class="img-circle" alt="User Image"/>
                                         </div>
                                         <!-- Message title and timestamp -->
                                         <h4>
-                                            {{ trans('adminlte_lang::message.supteam') }}
+                                            Welcome
                                             <small><i class="fa fa-clock-o"></i> 5 mins</small>
                                         </h4>
                                         <!-- The message -->
-                                        <p>{{ trans('adminlte_lang::message.awesometheme') }}</p>
+                                        <p>Welcome to machinery hire. Follow these documentation to get started</p>
                                     </a>
                                 </li><!-- end message -->
                             </ul><!-- /.menu -->
@@ -127,7 +127,7 @@
                                 <img src="{{Auth::user()->picture_url?Auth::user()->picture_url:asset('/img/avatar.png')}}" class="img-circle" alt="User Image" />
                                 <p>
                                     {{ Auth::user()->name }}
-                                    <small>{{ trans('adminlte_lang::message.login') }} Nov. 2012</small>
+                                    <small>{{ trans('adminlte_lang::message.login') }} {{ date("d M Y") }}</small>
                                 </p>
                             </li>
                             <!-- Menu Body -->

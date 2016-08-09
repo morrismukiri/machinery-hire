@@ -30,3 +30,5 @@ Route::get('/images/{imageName}/{width?}/{height?}', 'ImagesController@show');
 Route::resource('pricing-models', 'PricingModelsController');
 Route::resource('pricing-rates', 'PricingRatesController');
 Route::resource('categories', 'CategoriesController');
+Route::resource('listing', 'ListingController');
+Route::resource('users', 'UsersController');

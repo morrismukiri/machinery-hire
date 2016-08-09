@@ -8,12 +8,12 @@
         @if (! Auth::guest())
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="{{asset('/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image" />
+                    <img src="{{asset('/img/avatar.png')}}" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
                     <p>{{ Auth::user()->name }}</p>
                     <!-- Status -->
-                    <a href="#"><i class="fa fa-circle text-success"></i> {{ trans('adminlte_lang::message.online') }}</a>
+                    <a href="#" class="text-success"><i class="fa fa-circle text-success"></i> {{ trans('adminlte_lang::message.online') }}</a>
                 </div>
             </div>
         @endif
@@ -34,6 +34,8 @@
             <li class="header">Menu</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
+            <li><a href="{{ url('listing') }}"><i class='fa fa-link'></i> <span>Listings</span></a></li>
+            
             <li><a href="{{ url('categories') }}"><i class='fa fa-link'></i> <span>Categories</span></a></li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-dollar'></i> <span>Pricing</span> <i class="fa fa-angle-left pull-right"></i></a>
@@ -43,6 +45,7 @@
                     
                 </ul>
             </li>
+            <li><a href="{{ url('users') }}"><i class='fa fa-link'></i> <span>Users</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="">
 
     <h1>Pricing Rates <a href="{{ url('/pricing-rates/create') }}" class="btn btn-primary btn-xs" title="Add New Pricing Rate"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a></h1>
     <div class="table">
-        <table class="table table-bordered table-striped table-hover">
+        <table class="table table-bordered table-striped table-hover datatables">
             <thead>
                 <tr>
                     <th>S.No</th><th> Name </th><th> Pricing Model</th><th>Actions</th>

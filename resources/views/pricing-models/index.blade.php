@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="">
 
     <h1>Pricing Models <a href="{{ url('/pricing-models/create') }}" class="btn btn-primary btn-xs" title="Add New PricingModel"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a></h1>
     <div class="table">
