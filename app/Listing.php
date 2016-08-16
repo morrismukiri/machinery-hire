@@ -28,14 +28,14 @@ class Listing extends Model
     protected $fillable = ['item_name', 'item_picture', 'item_description', 'category_id', 'pricing_rate_id', 'hiring_cost', 'hiring_cost_with_expert', 'item_location', 'available_quantity', 'item_contact', 'supplier_id'];
     public function Category()
     {
-        $this->belongsTo(\App\Category::class,'category_id','id');
+        return $this->belongsTo(\App\Category::class,'category_id','id');
     }
     public function PricingRate()
     {
-        $this->belongsTo(\App\PricingRate::class,'pricing_rate_id','id');
+        return $this->belongsTo(\App\PricingRate::class,'pricing_rate_id','id');
     }
     public function Supplier()
     {
-        $this->belongsTo(\App\User::class,'supplier_id','id');
+        return $this->belongsTo(\App\User::class,'supplier_id','id');
     }
 }

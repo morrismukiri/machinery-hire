@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<!--
-Landing page based on Pratt: http://blacktie.co/demo/pratt/
--->
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Adminlte-laravel - {{ trans('adminlte_lang::message.landingdescription') }} ">
+    <meta name="description" content="Machinery hiring system">
     <meta name="author" content="Sergi Tur Badenas - acacha.org">
 
     <meta property="og:title" content="Machine Hire" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Adminlte-laravel - {{ trans('adminlte_lang::message.landingdescription') }}" />
+    <meta property="og:description" content="Machinery hiring system" />
     <meta property="og:url" content="http://demo.adminlte.acacha.org/" />
     <meta property="og:image" content="http://demo.adminlte.acacha.org/img/AcachaAdminLTE.png" />
     <meta property="og:image" content="http://demo.adminlte.acacha.org/img/AcachaAdminLTE600x600.png" />
@@ -20,8 +17,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <meta property="og:url" content="http://demo.adminlte.acacha.org" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@acachawiki" />
-    <meta name="twitter:creator" content="@acacha1" />
+    <meta name="twitter:site" content="@morrismukiri" />
+    <meta name="twitter:creator" content="@morrismukiri" />
 
     <title>Machinery Hire</title>
 
@@ -31,7 +28,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('/css/main.css') }}" rel="stylesheet">
-
+  <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
@@ -82,7 +79,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <h1>Machinery Hire</h1>
                 <h3>The online market place for all types of machine and <a href="#">heavy equipment</a>.<br/>
                  We connect <a href="#">vendors</a> with idle machinery with the customers close to them</h3>
-                <h3><a href="{{ url('/register') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
+                <h3><a href="home" class="btn btn-lg btn-success"><i class="fa fa-search"></i>    Find Machinery</a> <a href="{{ url('/register') }}" class="btn btn-lg btn-danger">Post Machinery</a> </h3>
             </div>
             <div class="col-lg-2">
                 <h5>Vendors Post Machine</h5>

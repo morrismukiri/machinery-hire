@@ -8,10 +8,10 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script>
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
+{{-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the
       user experience. Slimscroll is required when using the
-      fixed layout. -->
+      fixed layout. --}}
        <script src="{{ asset('/plugins/datatables/jquery.dataTables.min.js') }}"></script> 
  <script src="{{ asset('/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
       <script>

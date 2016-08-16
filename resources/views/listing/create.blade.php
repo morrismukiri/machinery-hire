@@ -18,7 +18,7 @@
             <div class="form-group {{ $errors->has('item_picture') ? 'has-error' : ''}}">
                 {!! Form::label('item_picture', 'Item Picture', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('item_picture', null, ['class' => 'form-control']) !!}
+                    {!! Form::file('item_picture', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('item_picture', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>

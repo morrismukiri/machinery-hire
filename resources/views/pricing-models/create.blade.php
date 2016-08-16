@@ -2,7 +2,6 @@
 
 @section('content')
 <div class="container">
-
     <h1>Create New PricingModel</h1>
     <hr/>
 

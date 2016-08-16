@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -9,6 +9,12 @@ use App\Listing;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
+
+use App\Category;
+use App\PricingModel;
+use App\PricingRate;
+
+
 
 class ListingController extends Controller
 {
@@ -31,7 +37,12 @@ class ListingController extends Controller
      */
     public function create()
     {
-        return view('listing.create');
+        $categories= Category::all()->lists('name','id');
+        $pricingModels= PricingModel::all();
+        $pricingRates= PricingRate::all()->lists('name','id');
+
+        return view('listing.new',compact('categories','pricingModels','pricingRates')) ;
+        // return view('listing.create');
     }
 
     /**
@@ -41,13 +52,41 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['category_id' => 'unsigned', 'pricing_rate_id' => 'unsigned', 'available_quantity' => 'unsigned', 'supplier_id' => 'unsigned', ]);
+       $this->validate($request, [
+            'item_name'=>'required',
+            'hiring_cost'=>'required',
+            'category_id' => 'required',
+            'pricing_rate_id' => 'required', 
+            'available_quantity' => 'required',
+            'item_location'=>'required', 
+            'available_quantity'=>'required',
+            'item_contact'=>'required',
+           ]);
 
-        Listing::create($request->all());
+        $listing=$request->all();
+
+        if($request->hasFile('item_picture') && $request->file('item_picture')->isValid()){
+            // dd("found");
+            $destinationPath= 'images/uploads/';
+            $filename=str_random(10).date("Ymd").'.'.$request->file('item_picture')->getClientOriginalExtension();
+            $request->file('item_picture')->move($destinationPath,$filename);
+
+            $listing['item_picture']= $destinationPath.$filename;
+
+        
+        }
+        if(!Auth::user()->admin){ $listing['supplier_id']= Auth::user()->id;}
+        // dd($listing);
+        listing::create($listing);
 
         Session::flash('flash_message', 'Listing added!');
-
+     if(Auth::user()->admin){
         return redirect('listing');
+     }else{
+            return redirect('vendor');
+        }
+     
+ 
     }
 
     /**
@@ -87,7 +126,16 @@ class ListingController extends Controller
      */
     public function update($id, Request $request)
     {
-        $this->validate($request, ['category_id' => 'unsigned', 'pricing_rate_id' => 'unsigned', 'available_quantity' => 'unsigned', 'supplier_id' => 'unsigned', ]);
+        $this->validate($request, [
+            'name'=>'required',
+            'hiring_cost'=>'request',
+            'category_id' => 'required',
+            'pricing_rate_id' => 'required', 
+            'available_quantity' => 'required',
+            'item_location'=>'required', 
+            'available_quantity'=>'required',
+            'item_contact'=>'required',
+            'supplier_id'=>'required']);
 
         $listing = Listing::findOrFail($id);
         $listing->update($request->all());

@@ -12,11 +12,11 @@ use Session;
 
 class UsersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return void
-     */
+     public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $users = User::paginate(15);
@@ -24,24 +24,15 @@ class UsersController extends Controller
         return view('users.index', compact('users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return void
-     */
     public function create()
     {
         return view('users.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return void
-     */
+  
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required', ]);
+        $this->validate($request, ['name' => 'required','email'=>'email' ]);
 
         User::create($request->all());
 
@@ -50,13 +41,6 @@ class UsersController extends Controller
         return redirect('users');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     *
-     * @return void
-     */
     public function show($id)
     {
         $user = User::findOrFail($id);

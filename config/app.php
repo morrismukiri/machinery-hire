@@ -148,6 +148,11 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+ /*
+         * Acacha AdminLTE template provider
+         */
+        Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+         App\Providers\RouteServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -158,11 +163,7 @@ return [
         Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-        /*
-         * Acacha AdminLTE template provider
-         */
-        Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
-         App\Providers\RouteServiceProvider::class,
+       
     ],
 
     /*

@@ -17,7 +17,9 @@
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
-                    <td>{{ $item->item_name }}</td><td>{{ $item->item_picture }}</td><td>{{ $item->item_description }}</td>
+                    <td>{{ $item->item_name }}</td><td><img src="{{ asset( $item->item_picture) }}" alt="Item Picture" style="
+    width: 300px;
+"></td><td>{{ $item->item_description }}</td>
                     <td>
                         <a href="{{ url('/listing/' . $item->id) }}" class="btn btn-success btn-xs" title="View Listing"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <a href="{{ url('/listing/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit Listing"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>

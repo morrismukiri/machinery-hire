@@ -23,6 +23,7 @@ Route::get('/auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('/auth/callback/{provider}', 'Auth\AuthController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index');
+Route::post('/home', 'HomeController@index');
 Route::post('/upload', 'HomeController@upload');
 Route::get('/upload', 'HomeController@uploadFile');
 Route::get('/images/{imageName}/{width?}/{height?}', 'ImagesController@show');
@@ -32,3 +33,8 @@ Route::resource('pricing-rates', 'PricingRatesController');
 Route::resource('categories', 'CategoriesController');
 Route::resource('listing', 'ListingController');
 Route::resource('users', 'UsersController');
+
+Route::get('/vendor', 'VendorsController@index');
+Route::get('/vendor/listings', 'VendorsController@listings');
+Route::get('/vendor/create', 'VendorsController@create');
+Route::post('/vendor/create', 'ListingController@store');
