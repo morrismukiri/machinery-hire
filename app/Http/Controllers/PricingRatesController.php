@@ -13,9 +13,9 @@ use App\PricingModel;
 
 class PricingRatesController extends Controller
 {
-     public function __construct()
+      public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','admin']);
     }
     /**
      * Display a listing of the resource.
