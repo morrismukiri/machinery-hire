@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
 <form method="post" action="" class="form">
+{{ csrf_field() }}
 	<div class="row">
 		<div class="col-md-3"><label for="category" class="input-label">Category</label>
 		<select name="category" id="category" class="form-input">
